@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Il Padrino's</title>
+		<link href="favicon.png" rel="icon">
+		<link href="styles.css" rel="stylesheet">
+		<!--Put the script here-->
+		<script>
+			document.getElementById("greenButton").addEventListener("click", changeToGreen());			
+			function changeToGreen(){
+				document.getElementById("myBody").style.backgroundColor = "#566B2F";
+			}
+
+			document.getElementById("redButton").addEventListener("click", changeToMaroon());			
+			function changeToMaroon(){
+				document.getElementById("myBody").style.backgroundColor = "maroon";
+			}
+		</script>
+	</head>
+	<body id="myBody">
+		<br><br><br>
+		<h1 id="restaurantName">Il Padrino's</h1>
+		<h2 id="byline">Family-Owned Italian Restaurant Since 2021</h2>
+		<h3 id="pageName">Meet the Staff!</h3>
+		
+		<nav id="navMenu">
+			<p class="pageLink">
+				<a href="restaurant.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="about.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="menu.html">Menu</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="reviewPage.html">Write a Review!</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="catering.html">Catering Order Form</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="research.html">Research</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="report.html">Report</a>
+			</p>
+		</nav>
+		
+		<p id="musicPrompt">Play some music while you browse this page!</p>
+		<p>
+			<audio controls loop>
+				<source src="Tarantella Napoletana.mp3">
+			</audio>
+		</p>
+		
+		<button id="greenButton" onclick="changeToGreen()">Click to Add Green Stripes</button><br><br>
+		<button id="redButton" onclick="changeToMaroon()">Click to Remove Green Stripes</button><br><br>
+		<!--Jst make up some folks-->
+		<h4>Kitchen Leader - Dan Merrino</h4>
+		<img src="kitchen_leader.jpg" alt="Dan Merrino">
+		<h4>Head Chef - Gino "The Bambino" Paccaletta</h4>
+		<img src="head_chef.jpg" alt="Gino Paccaletta">
+		<h4>Sous Chef - Carmella Bilotta</h4>
+		<img src="sous_chef.jpg" alt="Carmella Bilotta">
+		<h4>Cook 1 - Dominic DiFlore</h4>
+		<img src="cook1.jpg" alt="Dominic DiFlore">
+		<h4>Cook 2 - Anthony Rossi</h4>
+		<img src="cook2.jpg" alt="Anthony Rossi">
+		<h4>Dishwasher - Tony Thompson</h4>
+		<img src="dishwasher.jpg" alt="Tony Thompson">
+		<h4>Hostess/Cashier - Gina Merrino</h4>
+		<img src="host.jpg" alt="Gina Merrino">
+		<h4>Waiter/Food Runner - Robert Ceciliano</h4>
+		<img src="waiter1.jpg" alt="Robert Ceciliano">
+		<h4>Waitress/Food Runner - Maria Paccaletta</h4>
+		<img src="waiter2.jpg" alt="Maria Paccaletta">
+		<h4>Waiter/Food Runner - Michael Ceciliano</h4>
+		<img src="waiter3.jpg" alt="Michael Ceciliano">
+		
+		
+		<div id="hours">
+			<p>Hours:</p>
+			<p>Monday-Thursday: 11 a.m. - 8 p.m.</p>
+			<p>Friday & Saturday: 11 a.m. - 10 p.m.</p>
+			<p>Closed on Sundays!</p>
+		</div>	
+	</body>
+</html>	

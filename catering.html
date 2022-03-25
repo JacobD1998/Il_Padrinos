@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Il Padrino's</title>
+		<link href="favicon.png" rel="icon">
+		<link href="styles.css" rel="stylesheet">
+		<!--Put the script here-->
+		<script>
+			function cateringRequirementsCheck(){
+				let x = document.forms["cateringForm"]["customerName"].value;
+				let y = document.forms["cateringForm"]["occasion"].value;
+				let z = document.forms["cateringForm"]["dateOfEvent"].value;
+				let w = document.forms["cateringForm"]["foodItems"].value;
+				if(x==""){
+					alert("Name field must have a value!");
+					return false;
+				}
+				if(y==""){
+					alert("Occasion field must have a value!");
+					return false;
+				}
+				if(z==""){
+					alert("Date field must have a value!");
+					return false;
+				}
+				if(w==""){
+					alert("You need to tell us what items you want!");
+					return false;
+				}
+			}
+			
+			document.getElementById("greenButton").addEventListener("click", changeToGreen());			
+			function changeToGreen(){
+				document.getElementById("myBody").style.backgroundColor = "#566B2F";
+			}
+
+			document.getElementById("redButton").addEventListener("click", changeToMaroon());			
+			function changeToMaroon(){
+				document.getElementById("myBody").style.backgroundColor = "maroon";
+			}
+		</script>
+		
+	</head>
+	<body id="myBody">
+		<br><br><br>
+		<h1 id="restaurantName">Il Padrino's</h1>
+		<h2 id="byline">Family-Owned Italian Restaurant Since 2021</h2>
+		<h3 id="pageName">Request Catering Here!</h3>
+		
+		<nav id="navMenu">
+			<p class="pageLink">
+				<a href="restaurant.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="about.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="menu.html">Menu</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="reviewPage.html">Write a Review!</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="staff.html">Meet the Staff!</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="research.html">Research</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="report.html">Report</a>
+			</p>
+		</nav>
+		
+		<p id="musicPrompt">Play some music while you fill out this form!</p>
+		<p>
+			<audio controls loop>
+				<source src="Tarantella Napoletana.mp3">
+			</audio>
+		</p>
+		
+		<button id="greenButton" onclick="changeToGreen()">Click to Add Green Stripes</button><br><br>
+		<button id="redButton" onclick="changeToMaroon()">Click to Remove Green Stripes</button><br><br>
+		
+		<form name="cateringForm" action="https://wp.zybooks.com/form-viewer.php" onsubmit="return cateringRequirementsCheck()" method="POST">
+			<!--Two text fields, data, textarea-->
+			<label for="customerName">Name:</label>
+			<input type="text" name="customerName" id="customerName" placeholder="John Doe"><br><br>
+			
+			<label for="occasion">Occasion:</label>
+			<input type="text" name="occasion" id="occasion" placeholder="Birthday, Graduation, etc"><br><br>
+			
+			<label for="dateOfEvent">Date:</label>
+			<input type="date" name="dateOfEvent" id="dateOfEvent"><br><br>
+			
+			<label for="foodItems">List here all of the items desired:</label><br>
+			<textarea name="foodItems" id="foodItems" rows="10" cols="50"></textarea><br><br>
+			
+			<input type="submit" value="Submit">
+		</form>
+		
+		<div id="hours">
+			<p>Hours:</p>
+			<p>Monday-Thursday: 11 a.m. - 8 p.m.</p>
+			<p>Friday & Saturday: 11 a.m. - 10 p.m.</p>
+			<p>Closed on Sundays!</p>
+		</div>	
+	</body>
+</html>			

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Il Padrino's</title>
+		<link href="favicon.png" rel="icon">
+		<link href="styles.css" rel="stylesheet">
+		<!--Put the script here-->
+		<script>
+			document.getElementById("greenButton").addEventListener("click", changeToGreen());			
+			function changeToGreen(){
+				document.getElementById("myBody").style.backgroundColor = "#566B2F";
+			}
+
+			document.getElementById("redButton").addEventListener("click", changeToMaroon());			
+			function changeToMaroon(){
+				document.getElementById("myBody").style.backgroundColor = "maroon";
+			}
+		</script>
+	</head>
+	<body id="myBody">
+		<br><br><br>
+		<h1 id="restaurantName">Il Padrino's</h1>
+		<h2 id="byline">Family-Owned Italian Restaurant Since 2021</h2>
+		<h3 id="pageName">About</h3>
+		
+		<nav id="navMenu">
+			<p class="pageLink">
+				<a href="restaurant.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="menu.html">Menu</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="reviewPage.html">Write a Review!</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="catering.html">Catering Order Form</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="staff.html">Meet the Staff!</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="research.html">Research</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="report.html">Report</a>
+			</p>
+		</nav>
+		
+		<p id="musicPrompt">Play some music while you browse this page!</p>
+		<p>
+			<audio controls loop>
+				<source src="Tarantella Napoletana.mp3">
+			</audio>
+		</p>
+		
+		<button id="greenButton" onclick="changeToGreen()">Click to Add Green Stripes</button><br><br>
+		<button id="redButton" onclick="changeToMaroon()">Click to Remove Green Stripes</button><br><br>
+		
+		<p id="aboutParagraph">We are a restaurant in Leominster, Massachusetts opened in 2021. It has always been the dream of our founder, Jacob DeCarolis, to open his own Italian restaurant.
+			Being a proud Italian-American (though he knows almost nothing of actual Italian culture), Jacob is glad to be able to share his heritage with his community through 
+			<span class="italian">cibo</span>, and he hopes you and your family will have a great experience with us! <span class="italian">Ciao!</span>
+		</p>
+		
+		
+		<div id="hours">
+			<p>Hours:</p>
+			<p>Monday-Thursday: 11 a.m. - 8 p.m.</p>
+			<p>Friday & Saturday: 11 a.m. - 10 p.m.</p>
+			<p>Closed on Sundays!</p>
+		</div>
+		
+	</body>
+</html>	

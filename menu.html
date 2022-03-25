@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Il Padrino's</title>
+		<link href="favicon.png" rel="icon">
+		<link href="styles.css" rel="stylesheet">
+		<!--Put the script here-->
+		<script>
+			document.getElementById("greenButton").addEventListener("click", changeToGreen());			
+			function changeToGreen(){
+				document.getElementById("myBody").style.backgroundColor = "#566B2F";
+			}
+
+			document.getElementById("redButton").addEventListener("click", changeToMaroon());			
+			function changeToMaroon(){
+				document.getElementById("myBody").style.backgroundColor = "maroon";
+			}
+		</script>
+	</head>
+	<body id="myBody">
+		<br><br><br>
+		<h1 id="restaurantName">Il Padrino's</h1>
+		<h2 id="byline">Family-Owned Italian Restaurant Since 2021</h2>
+		<h3 id="pageName">Menu</h3>
+		
+		<nav id="navMenu">
+			<p class="pageLink">
+				<a href="restaurant.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="about.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="reviewPage.html">Write a Review!</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="catering.html">Catering Order Form</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="staff.html">Meet the Staff!</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="research.html">Research</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="report.html">Report</a>
+			</p>
+		</nav>
+		
+		<p id="musicPrompt">Play some music while you browse our menu!</p>
+		<p>
+			<audio controls loop>
+				<source src="Tarantella Napoletana.mp3">
+			</audio>
+		</p>
+	
+		<button id="greenButton" onclick="changeToGreen()">Click to Add Green Stripes</button><br><br>
+		<button id="redButton" onclick="changeToMaroon()">Click to Remove Green Stripes</button><br><br>
+		
+		<ul class="menu">
+		<!--Get creative, look at Il Camino for reference-->
+			
+			<li><span class="italian">Antipasti</span> (Appetizers)
+				<ul>
+					<li>Mini Antipasto Salad......................................................$5.00</li>
+					<li>Garlic Bread (x4).........................................................$4.50</li>
+					<li>Mozzarella Sticks (x8)....................................................$4.00</li>
+				</ul>
+			</li>
+			<p></p>
+			<li><span class="italian">Zuppa</span> (Soup)
+				<ul>
+					<li>Italian Wedding Soup......................................................$9.00</li>
+					<li>Chicken Noodle Soup.......................................................$8.50</li>
+					<li>Minestrone................................................................$8.50</li>
+					<li>Cappelletti...............................................................$8.00</li>
+				</ul>
+			</li>
+			<p></p>
+			<li><span class="italian">Insalata</span> (Salad)
+				<ul>
+					<li>Garden Salad..............................................................$10.00</li>
+					<li>Caesar Salad..............................................................$11.00</li>
+					<li>Chicken Caesar Salad......................................................$12.00</li>
+					<li>Caprese Salad.............................................................$13.00</li>
+					<li>Antipasto Salad...........................................................$14.00</li>
+				</ul>
+			</li>
+			<p></p>
+			<li>Meat/Vegetable Entrees (All come with a pasta choice of spaghetti, ziti, rigatoni, homemade noodles, or ravioli (cheese or meat).)
+				<ul>
+					<li>Veal Parmigiana...........................................................$19.00</li>
+					<li>Veal Piccata (with or without capers).....................................$20.00</li>
+					<li>Chicken Parmigiana........................................................$18.00</li>
+					<li>Chicken Piccata (with or without capers)..................................$19.00</li>
+					<li>Chicken Cacciatore........................................................$22.00</li>
+					<li>Chicken Marsala...........................................................$25.00</li>
+					<li>Grilled Sirloin (10 oz.)..................................................$25.00</li>
+					<li>Filet Mignon..............................................................$28.00</li>
+					<li>Baked Haddock.............................................................$23.00</li>
+					<li>Grilled Salmon............................................................$26.00</li>
+					<li>Half-lobster..............................................................$29.00</li>
+					<li>Eggplant Parmigiana.......................................................$22.00</li>
+					<li>Zucchini Parmigiana.......................................................$21.00</li>
+					<li>Tour of Italy with Meat (3 pasta choices and choice of 2 meats............$30.00</li>
+				</ul>
+			</li>
+			<p></p>
+			<li>Pasta-Only Entrees
+				<ul>
+					<li>Baked Lasagna.............................................................$22.00</li>
+					<li>Baked Cheese-Stuffed Manicotti............................................$23.00</li>
+					<li>Fettuccine Alfredo........................................................$21.00</li>
+					<li>Tortellini Alfredo........................................................$22.00</li>
+					<li>Tour of Little Italy (3 pasta choices)....................................$26.00</li>
+				</ul>
+			</li>
+			<p></p>
+			<li><span class="italian">Bevande</span> (Beverages)
+				<ul>
+					<li>Water.....................................................................$1.00</li>
+					<li>Milk and Juice............................................................$2.00</li>
+					<li>Fountain Drinks (Pepsi Products)..........................................$2.50</li>
+					<li>Shakes (Vanilla, Chocolate, Strawberry, Coffee)...........................$5.00</li>
+					<li>Ask for our beer and wine lists! (Must have valid I.D.)</li>
+				</ul>
+			</li>
+			<p></p>
+			<li>For the <span class="italian">Bambinos</span>
+				<ul>
+					<li>Spaghetti and Meatballs...................................................$10.00</li>
+					<li>Hot Dog...................................................................$9.00</li>
+					<li>Cheeseburger..............................................................$10.00</li>
+					<li>Macaroni & Cheese.........................................................$11.00</li>
+					<li>Grilled Cheese............................................................$10.00</li>
+				</ul>
+			</li>
+			<p></p>
+			<li><span class="italian">Dolce</span> (Dessert)
+				<ul>
+					<li>Tiramasu..................................................................$8.00</li>
+					<li>Gelato (35 Flavors!)......................................................$7.00</li>
+					<li>The Mount Etna Lava Cake..................................................$10.00</li>
+				<ul>
+			</li>
+		</ul>
+		
+		
+		<div id="hours">
+			<p>Hours:</p>
+			<p>Monday-Thursday: 11 a.m. - 8 p.m.</p>
+			<p>Friday & Saturday: 11 a.m. - 10 p.m.</p>
+			<p>Closed on Sundays!</p>
+		</div>	
+		
+	</body>
+</html>	

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Il Padrino's</title>
+		<link href="favicon.png" rel="icon">
+		<link href="styles.css" rel="stylesheet">
+		<!--Put the script here-->
+		<script>
+			document.getElementById("greenButton").addEventListener("click", changeToGreen());			
+			function changeToGreen(){
+				document.getElementById("myBody").style.backgroundColor = "#566B2F";
+			}
+
+			document.getElementById("redButton").addEventListener("click", changeToMaroon());			
+			function changeToMaroon(){
+				document.getElementById("myBody").style.backgroundColor = "maroon";
+			}
+		</script>
+	</head>
+	<body id="myBody">
+		<br><br><br>
+		<h1 id="restaurantName">Il Padrino's</h1>
+		<h2 id="byline">Family-Owned Italian Restaurant Since 2021</h2>
+		<h3 id="pageName">Home</h3>
+		
+		<nav id="navMenu">
+			<p class="pageLink">
+				<a href="about.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="menu.html">Menu</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="reviewPage.html">Write a Review!</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="catering.html">Catering Order Form</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="staff.html">Meet the Staff!</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="research.html">Research</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="report.html">Report</a>
+			</p>
+		</nav>
+		
+		<p id="musicPrompt">Play some music while you browse our website!</p>
+		<p>
+			<audio controls loop>
+				<source src="Tarantella Napoletana.mp3">
+			</audio>
+		</p>
+		
+		<button id="greenButton" onclick="changeToGreen()">Click to Add Green Stripes</button><br><br>
+		<button id="redButton" onclick="changeToMaroon()">Click to Remove Green Stripes</button><br><br>
+		
+		<div id="pictures">
+		
+			<img src="food1.jpg" alt="Fettuccine Alfredo">
+			<img src="wine1.jpg" alt="Wine Being Poured">
+			<img src="family1.jpg" alt="A Happy Family">
+			<img src="wine2.jpg" alt="A Wine Toast">
+			<img src="family2.jpg" alt="A Happy Family">
+			<img src="food2.png" alt="Baked Lasagna">
+			<img src="family3.jpg" alt="A Happy Family">
+			<img src="food3.jpg" alt="Chicken Parm">
+			<img src="wine3.jpg" alt="Wine">
+		
+		</div>
+	
+		<div id="hours">
+			<p>Hours:</p>
+			<p>Monday-Thursday: 11 a.m. - 8 p.m.</p>
+			<p>Friday & Saturday: 11 a.m. - 10 p.m.</p>
+			<p>Closed on Sundays!</p>
+		</div>
+		
+		
+		<a href="surprise.html"></a>
+	
+		
+	</body>
+</html>	

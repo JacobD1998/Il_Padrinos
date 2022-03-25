@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Il Padrino's</title>
+		<link href="favicon.png" rel="icon">
+		<link href="styles.css" rel="stylesheet">
+		<!--Put the script here-->
+		<script>
+			function requirementsCheck(){
+				let x = document.forms["reviewForm"]["customerName"].value;
+				if(x==""){
+					alert("Name field must have a value!");
+					return false;
+				}
+				let y = document.forms["reviewForm"]["review"].value;
+				if(y==""){
+					alert("Review box cannot be empty!");
+					return false;
+				}	
+			}
+			
+			document.getElementById("greenButton").addEventListener("click", changeToGreen());			
+			function changeToGreen(){
+				document.getElementById("myBody").style.backgroundColor = "#566B2F";
+			}
+
+			document.getElementById("redButton").addEventListener("click", changeToMaroon());			
+			function changeToMaroon(){
+				document.getElementById("myBody").style.backgroundColor = "maroon";
+			}
+		</script>
+	</head>
+	<body id="myBody">
+		<br><br><br>
+		<h1 id="restaurantName">Il Padrino's</h1>
+		<h2 id="byline">Family-Owned Italian Restaurant Since 2021</h2>
+		<h3 id="pageName">Leave a Review!</h3>
+		
+		<nav id="navMenu">
+			<p class="pageLink">
+				<a href="restaurant.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="about.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="menu.html">Menu</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="catering.html">Catering Order Form</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="staff.html">Meet the Staff!</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="research.html">Research</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="report.html">Report</a>
+			</p>
+		</nav>
+		
+		<p id="musicPrompt">Play some music while you fill out this form!</p>
+		<p>
+			<audio controls loop>
+				<source src="Tarantella Napoletana.mp3">
+			</audio>
+		</p>
+		
+		<button id="greenButton" onclick="changeToGreen()">Click to Add Green Stripes</button><br><br>
+		<button id="redButton" onclick="changeToMaroon()">Click to Remove Green Stripes</button><br><br>
+		
+		<form name="reviewForm" action="https://wp.zybooks.com/form-viewer.php" onsubmit="return requirementsCheck()" method="POST">
+			<label for="customerName">Name:</label>
+			<input type="text" name="customerName" id="customerName" placeholder="John Doe"><br><br>
+			
+			<label for="rating">Rate us on a scale of 1 to 10 with 1 being "Very Poor" and 10 being "Excellent"</label><br>
+			<select name="rating" required>
+				<!--Empty option at top-->
+				<option></option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select><br><br>
+
+			<label for="review">Write a Review:</label><br>
+			<textarea name="review" id="review" rows="5" cols="50"></textarea><br><br>
+			
+			<input type="submit" value="Submit">
+		</form>	
+		
+		<div id="hours">
+			<p>Hours:</p>
+			<p>Monday-Thursday: 11 a.m. - 8 p.m.</p>
+			<p>Friday & Saturday: 11 a.m. - 10 p.m.</p>
+			<p>Closed on Sundays!</p>
+		</div>	
+		
+	</body>
+</html>	
